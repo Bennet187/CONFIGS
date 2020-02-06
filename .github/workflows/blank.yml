@@ -1,0 +1,14 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Umgebung vorbereiten
+        uses: php-actions/composer@v1
+      - name: PHP-Info ausgeben
+        run:  php -i
